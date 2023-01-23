@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement - Javascript</title>
+    <script src="withStatement.js"></script>
+</head>
+
+<body>
+    <script>
+        // tampa with statement
+
+        // membuat sebuah variabel person yang valuenya berupa objek
+        const person = {
+            firstName: "Emier",
+            middleName: "Dzaky",
+            lastName: "Fahreza",
+        };
+        document.writeln("<br> ====================== <br>");
+        document.writeln(person.firstName);
+        document.writeln(person.middleName);
+        document.writeln(person.lastName);
+        document.writeln("<br> ====================== <br>");
+
+
+        // pakai with statement, ini sudah tidak direkomendasikan untuk versi yang terbaru karena ambigu
+        let orang = {
+            namaDepan: "Ignatius",
+            namaTengah: "Bagus",
+            namaBelakang: "Byantara",
+        }
+
+        with(orang) {
+            document.writeln("<br> ====================== <br>");
+            document.writeln(namaDepan);
+            document.writeln(namaTengah);
+            document.writeln(namaBelakang);
+            document.writeln("<br> ====================== <br>");
+        };
+    </script>
+</body>
+
+</html>
